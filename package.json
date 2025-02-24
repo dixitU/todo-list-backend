@@ -1,0 +1,36 @@
+{
+  "name": "todo-list-backend",
+  "version": "1.0.0",
+  "description": "sample project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --timeout 10000",
+    "build": "webpack --config webpack.config.js"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "author": "Dixit Ukani",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.10.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.20",
+    "should": "^13.2.3",
+    "supertest": "^6.2.4",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
