@@ -10,7 +10,7 @@ exports.generateToken = async (userId, isAccess, isRefresh) => {
       { userId: userId },
       process.env.ACCESS_SECRET,
       {
-        expiresIn: '5s',
+        expiresIn: '20s',
       }
     )
   }
@@ -18,7 +18,7 @@ exports.generateToken = async (userId, isAccess, isRefresh) => {
     refreshToken = await jwt.sign(
       { userId: userId },
       process.env.REFRESH_SECRET,
-      { expiresIn: '30s' }
+      { expiresIn: '2m' }
     )
   }
   return { accessToken: accessToken, refreshToken: refreshToken }
