@@ -33,7 +33,7 @@ exports.generateAccessToken = async (refreshToken) => {
         { userId: validation.userId },
         process.env.ACCESS_SECRET,
         {
-          expiresIn: '1d',
+          expiresIn: '20s',
         }
       ),
     }
