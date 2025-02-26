@@ -3,6 +3,13 @@ const User = require("../models/User");
 const { generateToken } = require("./TokenService");
 
 exports.signup = async (name, email, password) => {
+  // Check if user already exists
+  const existingUser = await User.findOne({ email });
+  if (existingUser) {
+    throw {
+      message: "User already exists",
+    };
+  }
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = new User({ name, email, password: hashedPassword });
   await user.save();
